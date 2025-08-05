@@ -1,10 +1,14 @@
+from django.template.defaultfilters import upper
 from rest_framework import serializers
 from .models import Book
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = '__all__'
+        fields = [
+            'ad',
+            'yayinevi',
+            ]
 
     def validate_tur(self, value):
         valid_choices = [choice[0] for choice in Book.TUR_CHOICES]
@@ -13,6 +17,7 @@ class BookSerializer(serializers.ModelSerializer):
         return value
 
     def validate(self, data):
+
         yayinevi = data.get('yayinevi')
         if self.instance:
             # Güncelleme işlemi için
@@ -24,3 +29,7 @@ class BookSerializer(serializers.ModelSerializer):
         if count >= 5:
             raise serializers.ValidationError(f"{yayinevi} yayınevinden en fazla 5 kitap olabilir.")
         return data
+    def to_representation(self, instance):
+        rep=super().to_representation(instance)
+        rep['ad'] = instance.ad.upper()
+        return rep

@@ -10,7 +10,7 @@ class Book(models.Model):
     ]
 
     ad = models.CharField(max_length=255, unique=True)
-    tur = models.CharField(max_length=20, choices=TUR_CHOICES)
+    tur = models.CharField(max_length=20)
     sayfa_sayisi = models.PositiveIntegerField()
     yayinevi = models.CharField(max_length=255)
 
