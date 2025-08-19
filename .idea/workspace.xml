@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70f6202b-2240-481a-94ef-49a6e281ae68" name="Changes" comment="author modeli eklendi,eklemeler ve entegrasyonlar yapıldı.datagriple bağlantı sağlandı">
+    <list default="true" id="70f6202b-2240-481a-94ef-49a6e281ae68" name="Changes" comment="author modelde ufak bir değişiklik yapıldı">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_api/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_api/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book_api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +101,10 @@
       <workItem from="1755028401330" duration="6663000" />
       <workItem from="1755073837116" duration="15511000" />
       <workItem from="1755107810029" duration="12525000" />
+      <workItem from="1755343364272" duration="2987000" />
+      <workItem from="1755425559760" duration="14432000" />
+      <workItem from="1755514703843" duration="26589000" />
+      <workItem from="1755599498749" duration="15081000" />
     </task>
     <task id="LOCAL-00001" summary="author modeli eklendi,eklemeler ve entegrasyonlar yapıldı.datagriple bağlantı sağlandı">
       <option name="closed" value="true" />

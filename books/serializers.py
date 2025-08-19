@@ -3,20 +3,26 @@ from .models import Book, Author
 
 
 class AuthorNestedSerializer(serializers.ModelSerializer):
+    yas=serializers.IntegerField(write_only=True)
     class Meta:
         model = Author
-        fields = ['ad', 'soyad']
+        fields = ['ad', 'soyad','yas','id']
+
 
 class BookSerializer(serializers.ModelSerializer):
     yazar = AuthorNestedSerializer(read_only=True)
+    yazar_id = serializers.PrimaryKeyRelatedField(
+        queryset=Author.objects.all(), write_only=True, source='yazar'
+        )
     kitap_sayisi = serializers.SerializerMethodField()
 
     class Meta:
         model = Book
         fields = '__all__'
 
+
     def get_kitap_sayisi(self, obj):
-        return obj.yazar.book_set.count()
+        return obj.yazar.book_set.count() if obj.yazar else 0
 
     def validate_tur(self, value):
         valid_choices = [choice[0] for choice in Book.TUR_CHOICES]
@@ -34,6 +40,8 @@ class BookSerializer(serializers.ModelSerializer):
         if kitaplar.count() >= 5:
             raise serializers.ValidationError(f"{yayinevi} yayınevinden en fazla 5 kitap olabilir.")
         return data
+
+
 
 
 # def to_representation(self, instance):
