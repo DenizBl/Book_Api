@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70f6202b-2240-481a-94ef-49a6e281ae68" name="Changes" comment="author modelde ufak bir değişiklik yapıldı">
+    <list default="true" id="70f6202b-2240-481a-94ef-49a6e281ae68" name="Changes" comment="Redis entegre edilidi uyuşmazlıklar düzeltildi">
+      <change afterPath="$PROJECT_DIR$/book_api/celery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/books/tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_api/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book_api/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_api/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
@@ -104,7 +105,10 @@
       <workItem from="1755343364272" duration="2987000" />
       <workItem from="1755425559760" duration="14432000" />
       <workItem from="1755514703843" duration="26589000" />
-      <workItem from="1755599498749" duration="15081000" />
+      <workItem from="1755599498749" duration="15989000" />
+      <workItem from="1755688054753" duration="5676000" />
+      <workItem from="1755775516166" duration="6071000" />
+      <workItem from="1755852433463" duration="8601000" />
     </task>
     <task id="LOCAL-00001" summary="author modeli eklendi,eklemeler ve entegrasyonlar yapıldı.datagriple bağlantı sağlandı">
       <option name="closed" value="true" />
@@ -114,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755093210803</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Redis entegre edilidi uyuşmazlıklar düzeltildi">
+      <option name="closed" value="true" />
+      <created>1755645477162</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755645477162</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +156,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
     <MESSAGE value="author modeli eklendi,eklemeler ve entegrasyonlar yapıldı.datagriple bağlantı sağlandı" />
-    <option name="LAST_COMMIT_MESSAGE" value="author modeli eklendi,eklemeler ve entegrasyonlar yapıldı.datagriple bağlantı sağlandı" />
+    <MESSAGE value="Redis entegre edilidi uyuşmazlıklar düzeltildi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redis entegre edilidi uyuşmazlıklar düzeltildi" />
   </component>
 </project>

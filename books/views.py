@@ -75,7 +75,7 @@ class BookViewSet(viewsets.ModelViewSet):
         cache.set(cache_key, yayinevi_sayisi + 1, timeout=300)
         return response
 
-    # Kitap görüntülenme sayısı
+
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()
         serializer = self.get_serializer(instance)

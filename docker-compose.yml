@@ -37,7 +37,36 @@ services:
     ports:
       - "6380:6379"
 
+  celery-worker:
+    build: .
+    command: celery -A book_api worker -l info
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis-cache
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: book_api_db
+      POSTGRES_HOST: db
+      DJANGO_SETTINGS_MODULE: book_api.settings
+
+  celery-beat:
+    build: .
+    command: celery -A book_api beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis-cache
+      - web
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: book_api_db
+      POSTGRES_HOST: db
+      DJANGO_SETTINGS_MODULE: book_api.settings
+
 volumes:
   postgres_data:
-
-

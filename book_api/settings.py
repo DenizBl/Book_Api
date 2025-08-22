@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'books',
     'django_filters',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,11 @@ STATIC_URL = 'static/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+CELERY_BROKER_URL = REDIS_URL
+CELERY_RESULT_BACKEND = None
+CELERY_TIMEZONE = "Europe/Istanbul"    # beat
+USE_TZ = True
+CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
