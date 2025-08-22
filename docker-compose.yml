@@ -3,7 +3,7 @@ services:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/app
+      - .:/app   #restart dediğinde düzgünce çalışmasının sebebi bu volumestir.
     ports:
       - "8000:8000"
     depends_on:
@@ -22,7 +22,7 @@ services:
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: book_api_db
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -62,7 +62,7 @@ services:
       - redis-cache
       - web
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_USER: postgres                #datagripteki alan isimleri aynı olsun
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: book_api_db
       POSTGRES_HOST: db

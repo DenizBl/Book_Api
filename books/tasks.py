@@ -3,7 +3,7 @@ from django.db.models import F
 from .models import Author
 
 @shared_task(bind=True)
-def bump_author_age(self, author_id=None):
+def bump_author_age(author_id=None):
 
     if author_id:
         updated = Author.objects.filter(id=author_id).update(yas=F("yas") + 1)

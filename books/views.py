@@ -7,10 +7,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 import logging
 from django.core.cache import cache
-from django.utils.decorators import method_decorator
-from django.views.decorators.cache import cache_page
 
 
+logger=logging.getLogger(__name__)        #hoca düzelttirdi bunu dikkat et 86. satırdaki logging.info-->logger.info çevrildi düzgünce import etmiştin zatten
 
 
 class AuthorListCreateAPIView(APIView):
@@ -84,7 +83,7 @@ class BookViewSet(viewsets.ModelViewSet):
         views = cache.get(cache_key, 0) + 1
         cache.set(cache_key, views, timeout=300)
 
-        logging.info(f"{instance.ad} kitabı {views} kere görüntülendi")
+        logger.info(f"{instance.ad} kitabı {views} kere görüntülendi")
 
         return Response({
             **serializer.data,
